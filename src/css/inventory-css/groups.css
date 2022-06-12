@@ -1,0 +1,42 @@
+/* group */
+
+.group{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: white;
+}
+
+
+.group .group-items{
+   display: flex;
+   flex-direction: row;
+   word-break: break-all;
+   background-color: aliceblue;
+   margin-top: 2px;
+   cursor: pointer;
+}
+.group-items:hover{
+   background-color: beige;
+}
+.group .name{
+   width: 30%;
+   padding: 0.5rem;
+}
+.group .belongs-to{
+   width: 30%;
+       padding: 0.5rem;
+
+}
+.group .created-at{
+   width: 25%;
+   padding: 0.5rem;
+
+}
+.group .total-items{
+   width: 15%;
+   padding: 0.5rem;
+
+}
+
+

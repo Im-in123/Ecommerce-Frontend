@@ -1,0 +1,241 @@
+/* inventories */
+.inv-products{
+    display: flex;
+    flex-direction: row;
+    word-break: break-all;
+    width: 100%;
+}
+
+
+
+.inv-products-cont{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    width: 100%;
+    
+}
+.inv-products-cont .items{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 13px;
+    margin-top: 2px;
+    background-color: aliceblue;
+    cursor: pointer;
+}
+.items:hover{
+    background-color: beige;
+ }
+.inv-products-cont .items .code{
+    width: 17%; 
+    padding: 0.2rem;
+}
+.inv-products-cont .items .photo{
+    width: 17%; 
+    padding: 0.5rem;
+
+}
+.inv-products-cont .items .photo img{
+    object-fit: cover;
+    width: 97%;
+    max-height: 800px;
+
+
+}
+.inv-products-cont .items .name{
+    width: 17%; 
+    padding: 0.2rem;
+
+}
+.inv-products-cont .items .category{
+    width: 17%; 
+    padding: 0.2rem;
+
+}
+.inv-products-cont .items .price{
+    width: 8%; 
+    padding: 0.2rem;
+
+}
+.inv-products-cont .items .compare-price{
+    width: 8%; 
+    padding: 0.2rem;
+
+}
+.inv-products-cont .items .remaining{
+    width: 8%; 
+    padding: 0.2rem;
+
+}
+.inv-products-cont .items .total{
+    width: 8%; 
+    padding: 0.2rem;
+
+}
+/* //// */
+
+
+.size-wrapper .spanny-div {
+    display: flex;
+  }
+.size-wrapper .spanny {
+    color: black;
+    font-weight: 500;
+    font-size: 13px;
+    margin: 9px;
+  }
+  
+.sizes {
+    display: flex;
+    /* display: none; */
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid #c0c0c0;
+    border-radius: 0.25rem;
+    margin: 1rem;
+    position: relative;
+    background: white;
+  }
+ .sizes:focus-within {
+    border-color: dodgerblue;
+  }
+ .input-sizes {
+    flex: 1;
+    margin: 0.5rem 0;
+    padding: 0 0.25rem;
+    outline: none;
+    color: black;
+  }
+.size {
+    margin: 0.25rem;
+    padding: 0.05rem 0.5rem;
+    /* border: 1px solid #c0c0c0; */
+    border-radius: 4px;
+    white-space: nowrap;
+    color: black;
+    cursor: pointer;
+    user-select: none;
+    background: #e5f1ff;
+    font-size: 13px;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+.size .x {
+    color: #2e8eff;
+    font-size: 14px;
+  }
+ .size .x:hover {
+    cursor: text;
+  }
+.sizes-drop {
+    display: inline-block;
+    list-style: none;
+    width: fit-content;
+    border: 1px solid #c0c0c0;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    position: absolute;
+    top: calc(100% + 0.15rem);
+    z-index: 1;
+    background: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s;
+    color: #000;
+  }
+.sizes-drop.active {
+    background: lightyellow;
+    opacity: 1;
+    pointer-events: auto;
+  }
+ .sizes-drop__item {
+    padding: 0.25rem 1rem;
+  }
+ .sizes-drop__item:hover,
+.sizes-drop__item:focus {
+    background: gold;
+  }
+  
+
+  
+.color-wrapper .spanny-div {
+  display: flex;
+}
+.color-wrapper .spanny {
+  color: black;
+  font-weight: 500;
+  font-size: 13px;
+  margin: 9px;
+}
+
+.colors {
+  display: flex;
+  /* display: none; */
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid #c0c0c0;
+  border-radius: 0.25rem;
+  margin: 1rem;
+  position: relative;
+  background: white;
+}
+.colors:focus-within {
+  border-color: dodgerblue;
+}
+.input-colors {
+  flex: 1;
+  margin: 0.5rem 0;
+  padding: 0 0.25rem;
+  outline: none;
+  color: black;
+}
+.color {
+  margin: 0.25rem;
+  padding: 0.05rem 0.5rem;
+  /* border: 1px solid #c0c0c0; */
+  border-radius: 4px;
+  white-space: nowrap;
+  color: black;
+  cursor: pointer;
+  user-select: none;
+  background: #e5f1ff;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.color .x {
+  color: #2e8eff;
+  font-size: 14px;
+}
+.color .x:hover {
+  cursor: text;
+}
+.colors-drop {
+  display: inline-block;
+  list-style: none;
+  width: fit-content;
+  border: 1px solid #c0c0c0;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  position: absolute;
+  top: calc(100% + 0.15rem);
+  z-index: 1;
+  background: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s;
+  color: #000;
+}
+.colors-drop.active {
+  background: lightyellow;
+  opacity: 1;
+  pointer-events: auto;
+}
+.colors-drop__item {
+  padding: 0.25rem 1rem;
+}
+.colors-drop__item:hover,
+.colors-drop__item:focus {
+  background: gold;
+}

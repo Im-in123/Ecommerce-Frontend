@@ -1,0 +1,247 @@
+
+.shopping-cart{
+width: 100%;
+height: auto;
+}
+.shopping-cart h1{
+    text-align: center;
+}
+.shopping-cart .conts{
+width: 100%;
+display: flex;
+flex-direction:row;
+
+}
+.conts .conts-wrapper{
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+
+}
+.conts .cart{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid black;
+    margin: 2px;
+    max-height: 150px;
+}
+.conts .cart img{
+    width: 20%;
+    object-fit: cover;
+
+}
+.conts .cart .img-d{
+  width: 20%;
+  background-color: white;
+}
+.conts .cart .name{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    cursor: pointer;
+}
+.conts .cart .name span:nth-child(1):hover{
+  text-decoration: underline;
+}
+
+.conts .cart .name span{
+    margin-bottom: 5px;
+}
+.conts  .cart  .product-quantity{
+    width: 15%;
+    border: 1px solid black;
+    height: 50px;
+    margin: 1rem;
+}
+.conts  .cart  .rm-b{
+  width: 15%;
+  border: none;
+  height: 50px;
+  margin: 1rem;
+}
+.cart  .qty-input {
+  color: #000;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+  height:100%;
+}
+
+.cart .qty-input .product-qty,
+.cart .qty-input .qty-count {
+  background: transparent;
+  color: inherit;
+  font-weight: bold;
+  border: none;
+  display: inline-block;
+  min-width: 0;
+  height: 2.5rem;
+  line-height: 1;
+  height:100%;
+}
+.cart  .qty-input .product-qty:focus,
+.cart  .qty-input .qty-count:focus {
+  outline: none;
+}
+.cart .qty-input .product-qty {
+  width: 50%;
+  min-width: 0;
+  display: inline-block;
+  text-align: center;
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+.cart .qty-input .product-qty::-webkit-outer-spin-button, .qty-input .product-qty::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+.cart .qty-input .qty-count {
+  padding: 0;
+  cursor: pointer;
+  width: 2.5rem;
+  font-size: 1.25em;
+  text-indent: -100px;
+  overflow: hidden;
+  position: relative;
+}
+.cart .qty-input .qty-count:before, .qty-input .qty-count:after {
+  content: "";
+  height: 2px;
+  width: 10px;
+  position: absolute;
+  display: block;
+  background: #000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.cart .qty-input .qty-count--add:after {
+  transform: rotate(90deg);
+}
+.cart .qty-input .qty-count:disabled {
+  color: #ccc;
+  background: #f2f2f2;
+  cursor: not-allowed;
+  border-color: transparent;
+}
+.cart .qty-input .qty-count:disabled:before, .qty-input .qty-count:disabled:after {
+  background: #ccc;
+}
+
+
+.conts .cart .price{
+    margin: 1rem;
+
+    width: 15%;
+}
+
+.conts .cart .del{
+    margin: 1rem;
+    width: 5%;
+    cursor: pointer;
+
+}
+
+.cart .del:hover{
+    color: var(--orange-ish);
+}
+.conts .checkout{
+width: 25%;
+margin: 0.5rem;
+background-color: #f8f9fa;
+padding: 0.5rem;
+}
+
+.conts .checkout .checkout-inner .sub-total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.conts .checkout .checkout-inner .sub-total span{
+    margin: 1rem 0px;
+}
+
+.conts .checkout .total{
+    display: flex;
+    flex-direction: column;
+}
+.conts .checkout .total .total-inner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.conts .checkout .total .total-inner span{
+    margin: 1rem 0px;
+
+}
+
+@media screen and (max-width: 840px) {
+
+  .shopping-cart .conts{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    
+    }
+    .conts .conts-wrapper{
+      width: 100%;
+
+    }
+    .conts .cart{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        font-size: 14px;
+        margin: 1px;
+        max-height: unset;
+        word-break: break-word;
+    }
+        .conts .cart del{
+        display: none;
+      }
+      .conts .cart img{
+        width: 20%;
+    
+    }
+      .conts .cart .price{
+        margin:1rem 5px;
+
+        width: 25%;
+    }
+    .conts .cart .name{
+      margin:1rem 5px;
+
+      width: 25%;
+    
+    }
+    .conts  .cart  .product-quantity{
+      margin:1rem 5px;
+      width: 22%;
+
+    }
+    .conts .cart .del{
+      margin:1rem 5px;
+      width: 8%;
+    
+
+    }
+
+    .conts .checkout{
+      width: 100%;
+      margin: 0;
+     
+      }
+}
+

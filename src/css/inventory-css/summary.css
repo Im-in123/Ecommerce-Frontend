@@ -1,0 +1,11 @@
+.summary-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.summary-container .info{
+    display: flex;
+    flex-direction: column;
+}

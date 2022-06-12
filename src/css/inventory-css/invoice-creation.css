@@ -1,0 +1,118 @@
+/* invoice-creation */
+.invoice-creation{
+    display: flex;
+    flex-direction: row;
+    word-break: break-all;
+    width: 100%;
+}
+
+.invoice-creation-parent{
+    width: 70%;
+}
+.invoice-creation-cont{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    width: 100%;
+    
+}
+.invoice-creation-cont{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    width: 100%;
+    
+}
+.invoice-creation-parent .items-cont{
+width:100%;
+}
+
+.invoice-creation-parent .items-cont .items{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 13px;
+    margin-top: 2px;
+    background-color: aliceblue;
+
+}
+.invoice-creation-parent .items .code{
+    width: 20%; 
+    padding: 0.2rem;
+}
+.invoice-creation-parent .items .photo{
+    width: 20%; 
+    padding: 0.2rem;
+
+}
+.invoice-creation-parent .items img{
+    width: 100%;
+    object-fit: cover; 
+}
+
+.invoice-creation-parent .items .name{
+    width: 20%; 
+    padding: 0.2rem;
+
+}
+
+.invoice-creation-parent .items .price{
+    width: 10%; 
+    padding: 0.2rem;
+
+}
+
+.invoice-creation-parent .items .remaining{
+    width: 10%; 
+    padding: 0.2rem;
+
+}
+.invoice-creation-parent .items .actions{
+    width: 20%; 
+    padding: 0.2rem;
+
+}
+
+
+.mini{
+    width: 30%;
+    display: flex;
+    background-color: white;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.mini-items{
+display: flex;
+flex-direction:row;
+width: 100%;
+border-bottom: 1px solid black;
+justify-content: center;
+font-size: 13px;
+}
+.mini-items .name{
+  width:30%;
+  padding:0.2rem;
+}
+
+.mini-items .qty{
+    width:10%;
+    padding:0.2rem;
+  }
+
+  .mini-items .price{
+    width:15%;
+    padding:0.2rem;
+  }
+
+  .mini-items .total{
+    width:15%;
+    padding:0.2rem;
+  }
+
+  .mini-items .actions{
+    width:30%;
+    padding:0.2rem;
+  }

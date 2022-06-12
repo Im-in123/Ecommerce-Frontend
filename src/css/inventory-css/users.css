@@ -1,0 +1,51 @@
+/* users */
+
+.users{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: white;
+}
+
+
+.users .users-items{
+   display: flex;
+   flex-direction: row;
+   word-break: break-all;
+   background-color: aliceblue;
+   margin-top: 2px;
+   font-size: 14px;
+   cursor: pointer;
+}
+.users-items:hover{
+   background-color: beige;
+}
+.users .email{
+   width: 20%;
+   padding: 0.5rem;
+}
+.users .name{
+   width: 20%;
+       padding: 0.5rem;
+
+}
+.users .is-active{
+   width: 10%;
+   padding: 0.5rem;
+
+}
+.users .last-login{
+   width: 20%;
+   padding: 0.5rem;
+
+}
+.users .role{
+   width: 10%;
+   padding: 0.5rem;
+
+}
+.users .created-at{
+    width: 20%;
+    padding: 0.5rem;
+ 
+ }

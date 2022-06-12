@@ -1,0 +1,45 @@
+/* user-activity */
+.user-activity{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: white;
+}
+
+
+.user-activity-group{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+
+.user-activity .user-activity-items{
+    display: flex;
+    flex-direction: row;
+    word-break: break-all;
+    background-color: aliceblue;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.user-activity-items:hover{
+    background-color: beige;
+}
+.user-activity .performed-by{
+    width: 25%;
+    padding: 0.5rem;
+
+}
+
+.user-activity .created-at{
+    width: 25%;
+    padding: 0.5rem;
+
+}
+
+.user-activity .action{
+    width: 50%;
+    padding: 0.5rem;
+
+}

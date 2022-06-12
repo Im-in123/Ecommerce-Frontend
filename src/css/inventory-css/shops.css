@@ -1,0 +1,44 @@
+/* shop */
+.shop{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: white;
+}
+
+
+.shop-group{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+
+.shop .shop-items{
+    display: flex;
+    flex-direction: row;
+    word-break: break-all;
+    background-color: aliceblue;
+    margin-top: 2px;
+    cursor: pointer;
+}
+.shop-items:hover{
+    background-color: beige;
+}
+.shop .name{
+    width: 50%;
+    padding: 0.5rem;
+}
+.shop .created-by{
+    width: 25%;
+    padding: 0.5rem;
+
+}
+
+.shop .created-at{
+    width: 25%;
+    padding: 0.5rem;
+
+}
+
+
