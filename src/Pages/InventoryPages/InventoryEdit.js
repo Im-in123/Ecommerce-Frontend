@@ -12,6 +12,7 @@ import {
 import { axiosHandler, miniErrorHandler } from "../../auth/helper";
 import { showInventoryMessageAction } from "../../stateManagement/actions";
 import InventoryContent from "../../Components/Inventory/InventoryContent";
+import { Editor } from "@tinymce/tinymce-react";
 
 const InventoryEdit = () => {
   const {
@@ -670,22 +671,35 @@ const UpdateInventory = (props) => {
                   </label>
                   {fieldsError.belongs_to && <li>{fieldsError.belongs_to}</li>}
                 </div>
-                <div className="">
-                  <label htmlFor="decription">
-                    <span>Description:</span>
 
-                    <textarea
-                      placeholder="Product description"
-                      name="description"
-                      defaultValue={props.inventoryData.description}
-                      onChange={onChangeInventoryData}
-                      required
-                    ></textarea>
-                  </label>
-                  {fieldsError.description && (
-                    <li>{fieldsError.description}</li>
-                  )}
+                <div className="">
+                  Description:
+                  <Editor
+                    value={props.inventoryData.description}
+                    init={{
+                      height: 250,
+                      // menubar: false,
+                      placeholder: "Product description...",
+
+                      plugins:
+                        "lists advlist table paste image code link imagetools advcode media powerpaste codesample",
+                      toolbar:
+                        "undo redo  formatselect   bullist numlist outdent indent removeformat bold italic backcolor  alignleft aligncenter alignright alignjustify help",
+                    }}
+                    onEditorChange={(value, editor) => {
+                      props.setInventoryData({
+                        ...props.inventoryData,
+                        description: value,
+                      });
+                    }}
+                  />
+                  <>
+                    {fieldsError.description && (
+                      <li>{fieldsError.description}</li>
+                    )}
+                  </>
                 </div>
+
                 <div className="size-wrapper">
                   <div className="spanny-div">
                     <span className="spanny">

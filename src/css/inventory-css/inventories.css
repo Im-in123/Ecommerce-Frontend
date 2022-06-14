@@ -39,7 +39,7 @@
 .inv-products-cont .items .photo img{
     object-fit: cover;
     width: 97%;
-    max-height: 800px;
+    max-height: 100px;
 
 
 }

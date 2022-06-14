@@ -7,6 +7,7 @@ import {
   removeFromCartAction,
 } from "../../stateManagement/actions";
 import { store } from "../../stateManagement/store";
+import { LOCAL_CHECK } from "../../urls";
 
 const ShoppingCart = () => {
   const {
@@ -123,7 +124,11 @@ const ShoppingCart = () => {
               return (
                 <div className="cart" key={index}>
                   <img
-                    src={obj.item.photo[0]?.image}
+                    src={
+                      LOCAL_CHECK
+                        ? obj.item.photo[0]?.image
+                        : obj.item.photo[0]?.photo
+                    }
                     alt={obj.item.name}
                     key={index}
                   />

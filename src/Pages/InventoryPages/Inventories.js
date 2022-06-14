@@ -15,6 +15,7 @@ import "../../css/inventory-css/inventories.css";
 import { getToken } from "../../auth/inventoryAuthController";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import ReactPaginate from "react-paginate";
+import { Editor } from "@tinymce/tinymce-react";
 
 let img_ids = [];
 const Inventories = () => {
@@ -553,7 +554,7 @@ const CreateInventory = (props) => {
       console.log(result);
       props.dispatch({
         type: showInventoryMessageAction,
-        payload: { message: "Group created successfully!" },
+        payload: { message: "Item created successfully!" },
       });
       setRawPhoto([]);
       img_ids = [];
@@ -730,19 +731,28 @@ const CreateInventory = (props) => {
               </label>
               {fieldsError.belongs_to && <li>{fieldsError.belongs_to}</li>}
             </div>
-            <div className="input-container">
-              <label htmlFor="decription">
-                <span>Description:</span>
-
-                <textarea
-                  placeholder="Product description"
-                  name="description"
-                  defaultValue={addInventoryData.description}
-                  onChange={onChangeAddInventoryData}
-                  required
-                ></textarea>
-              </label>
-              {fieldsError.compare_price && <li>{fieldsError.description}</li>}
+            <div className="">Description:
+              <Editor
+                value={addInventoryData.description}
+                init={{
+                  height: 250,
+                  // menubar: false,
+                  placeholder:"Product description...",
+                  plugins:
+                    "lists advlist table paste image code link imagetools advcode media powerpaste codesample",
+                  toolbar:
+                    "undo redo  formatselect   bullist numlist outdent indent removeformat bold italic backcolor  alignleft aligncenter alignright alignjustify help",
+                }}
+                onEditorChange={(value, editor) => {
+                  setAddInventoryData({
+                   ...addInventoryData,
+                    description: value,
+                  });
+                }}
+              />
+              <>
+                {fieldsError.description && <li>{fieldsError.description}</li>}
+              </>
             </div>
             <div
               className="size-wrapper"

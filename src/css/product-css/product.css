@@ -38,6 +38,7 @@
   }
   .product-gallery  img{
     max-width: 640px;
+    max-height: 650px;
     margin-bottom: 3px;
   }
   .product-desc {

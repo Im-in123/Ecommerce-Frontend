@@ -214,7 +214,7 @@ const Product = () => {
       console.log("res::", res.data);
       setProduct(res.data);
       // if (!state) {
-      getRelatedProducts(res.data.slug);
+      getRelatedProducts(res.data.name);
       // }
     }
   };
@@ -292,7 +292,7 @@ const Product = () => {
                 <div className="product-short">
                   <h3>Description</h3>
                   {product.description?.length > 200 ? (
-                    <p
+                    <div
                       onClick={() => {
                         try {
                           let el = document
@@ -301,13 +301,21 @@ const Product = () => {
                         } catch (error) {}
                       }}
                     >
-                      {product.description?.substring(0, 190)} &nbsp;
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: product.description?.substring(0, 190),
+                        }}
+                      />
                       <span style={{ color: "grey", cursor: "pointer" }}>
                         See more..
                       </span>
-                    </p>
+                    </div>
                   ) : (
-                    <p>{product.description}</p>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: product.description,
+                      }}
+                    />
                   )}
                 </div>
 
@@ -335,9 +343,12 @@ const Product = () => {
             {product.description?.length > 200 && (
               <>
                 <h2 id="descr">Description</h2>
-                <p>{product.description}</p>
+                <div
+                  dangerouslySetInnerHTML={{ __html: product.description }}
+                />
               </>
             )}
+
             <div>
               <GridContainerProduct
                 item={relatedProducts}
