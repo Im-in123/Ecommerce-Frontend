@@ -1,8 +1,8 @@
 // export const BASE_URL = "http://127.0.0.1:8000/";
 export const BASE_URL = "https://swelyn.herokuapp.com/";
 
-export const LOCAL_CHECK = true;
-// export const LOCAL_CHECK = false;
+// export const LOCAL_CHECK = true;
+export const LOCAL_CHECK = false;
 export const APP_NAME = "Swelyn";
 export const LOGIN_URL = BASE_URL + "user/login";
 export const SIGNUP_URL = BASE_URL + "user/signup";
