@@ -221,6 +221,7 @@ const UpdateInventory = (props) => {
       let t = props.inventoryData.sizes[i];
       st.push(t.name);
     }
+    console.log("st:::", st);
     for (var i in st) {
       addSize(st[i]);
     }
@@ -373,7 +374,7 @@ const UpdateInventory = (props) => {
         if (!e.code !== "Escape") return;
       });
     };
-  }, []);
+  }, [props.inventoryData]);
 
   const submitAddInventory = async () => {
     console.log(imgIds);
@@ -486,7 +487,7 @@ const UpdateInventory = (props) => {
     e.preventDefault();
     if (props.inventoryData.photo.length < 2) {
       setFieldsError({
-        image: "Add an image to delete able to delete this one!",
+        image: "Add another image to be able to delete this one!",
       });
       return;
     }
@@ -509,6 +510,26 @@ const UpdateInventory = (props) => {
         ...props.inventoryData,
         photo,
       });
+    }
+  };
+
+  const deleteItem = async (slug) => {
+    if (!slug) return;
+    if (!window.confirm("Are you sure you want to delete this item!!!?"))
+      return;
+
+    const token = await getToken();
+    const result = await axiosHandler({
+      method: "delete",
+      url: `${INVENTORY_URL}/${slug}`,
+      token,
+    }).catch((e) => {
+      const mini_err = miniErrorHandler(e, true);
+      alert("Delete error");
+    });
+    if (result) {
+      console.log(result);
+      props.navigate(-1);
     }
   };
   return (
@@ -767,7 +788,9 @@ const UpdateInventory = (props) => {
           </div>
         </div>
         <hr />
-        <button>Delete Item</button>
+        <button onClick={() => deleteItem(props.inventoryData.slug)}>
+          Delete Item
+        </button>
       </div>
     </>
   );

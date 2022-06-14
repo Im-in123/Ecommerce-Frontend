@@ -6,7 +6,7 @@ import "../../../css/product-css/auth/signup.css";
 import visibility from "../../../assets/svg/visibility.svg";
 import visibility_off from "../../../assets/svg/visibility_off.svg";
 import close_black from "../../../assets/svg/close_black.svg";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -40,7 +40,7 @@ const Login = () => {
       url: LOGIN_URL,
       data: loginData,
     }).catch((e) => {
-      const mini_err = miniErrorHandler(e, false);
+      const mini_err = miniErrorHandler(e, true);
       if (mini_err.message) {
         if (mini_err.server_error) {
           setFieldsError(mini_err.message);
@@ -59,7 +59,7 @@ const Login = () => {
     <div className="signup-page">
       <div className="content">
         <div className="img-cont">
-          <img src={require("../../../assets/slide/sofa.jpg")} alt="" />
+          {/* <img src={require("../../../assets/slide/sofa.jpg")} alt="" /> */}
         </div>
         <div className="form-container">
           <div>
@@ -131,6 +131,9 @@ const Login = () => {
           <div className="b-login">
             <span>Don't have an account?</span>{" "}
             <button onClick={() => navigate("/signup")}>SIGNUP</button>
+          </div>
+          <div className="b-login">
+            <Link to="/forgot-password">Forgot Password?</Link>
           </div>
         </div>
       </div>

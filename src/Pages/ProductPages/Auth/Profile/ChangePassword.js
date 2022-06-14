@@ -82,7 +82,7 @@ const ChangePassword = (props) => {
             <h2 className="formTitle">Change Password</h2>
 
             <div className="inputDiv">
-              <label className="inputLabel" for="currentPassword">
+              <label className="inputLabel" htmlFor="currentPassword">
                 Current Password
               </label>
               <input
@@ -91,12 +91,12 @@ const ChangePassword = (props) => {
                 id="currentPassword"
                 name="currentPassword"
                 onChange={onChange}
-                value={passdata.currentPassword}
+                defaultValue={passdata.currentPassword}
                 required
               />
             </div>
             <div className="inputDiv">
-              <label className="inputLabel" for="password">
+              <label className="inputLabel" htmlFor="password">
                 New Password
               </label>
               <input
@@ -105,12 +105,12 @@ const ChangePassword = (props) => {
                 id="password"
                 name="password"
                 onChange={onChange}
-                value={passdata.password}
+                defaultValue={passdata.password}
                 required
               />
             </div>
             <div className="inputDiv">
-              <label className="inputLabel" for="confirmPassword">
+              <label className="inputLabel" htmlFor="confirmPassword">
                 Confirm New Password
               </label>
               <input
@@ -119,7 +119,7 @@ const ChangePassword = (props) => {
                 id="confirmPassword"
                 name="confirmPassword"
                 onChange={onChange}
-                value={passdata.confirmPassword}
+                defaultValue={passdata.confirmPassword}
                 required
               />
             </div>

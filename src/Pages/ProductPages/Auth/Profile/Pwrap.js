@@ -51,20 +51,20 @@ const Pwrap = (props) => {
     <>
       <Header />
       <div className="settings-main">
-        <div class="hamburger-menu">
+        <div className="hamburger-menu">
           <span id="hamburger-icon">
-            <i class="fa-solid fa-bars"></i>
+            <i className="fa-solid fa-bars"></i>
           </span>
         </div>
-        <div class="sidebar" id="sidebars">
-          <div class="close-icon" id="close" onClick={() => closeNav()}>
-            <i class="fa-solid fa-xmark"></i>
+        <div className="sidebar" id="sidebars">
+          <div className="close-icon" id="close" onClick={() => closeNav()}>
+            <i className="fa-solid fa-xmark"></i>
           </div>
 
-          <ul class="links">
-            {/* <li class="link active">
+          <ul className="links">
+            {/* <li className="link active">
               <a href="#">
-                <span class="material-icons-outlined icon">home</span> Home
+                <span className="material-icons-outlined icon">home</span> Home
               </a>
             </li> */}
             <li
@@ -75,23 +75,12 @@ const Pwrap = (props) => {
             >
               <Link to="#">
                 <span>
-                  <i class="fa-solid fa-address-card"></i>
+                  <i className="fa-solid fa-address-card"></i>
                 </span>
                 Info
               </Link>
             </li>
-            {/* <li class="link">
-              <a href="#">
-                <span class="material-icons-outlined icon">email</span>
-                Messages
-              </a>
-            </li> */}
-            {/* <li class="link">
-              <a href="#">
-                <span class="material-icons-outlined icon">notifications</span>
-                Notification
-              </a>
-            </li> */}
+
             <li
               className={`link ${props.name === "email" && "active"}`}
               onClick={() => {
@@ -100,33 +89,33 @@ const Pwrap = (props) => {
             >
               <Link to="#">
                 <span>
-                  <i class="fa-solid fa-envelope"></i>
+                  <i className="fa-solid fa-envelope"></i>
                 </span>
                 Email
               </Link>
             </li>
             <li
-              class="link"
+              className="link"
               //   onClick={() => {
               //     switchView("liked");
               //   }}
             >
               <a href="#">
                 <span>
-                  <i class="fa-solid fa-location-dot"></i>
+                  <i className="fa-solid fa-location-dot"></i>
                 </span>{" "}
                 Address
               </a>
             </li>
             <li
-              class="link"
+              className="link"
               //   onClick={() => {
               //     switchView("profile_update");
               //   }}
             >
               <a href="#">
                 <span>
-                  <i class="fa-solid fa-credit-card"></i>
+                  <i className="fa-solid fa-credit-card"></i>
                 </span>{" "}
                 Billing
               </a>
@@ -139,7 +128,7 @@ const Pwrap = (props) => {
             >
               <Link to="#">
                 <span>
-                  <i class="fa-solid fa-lock"></i>
+                  <i className="fa-solid fa-lock"></i>
                 </span>{" "}
                 Password
               </Link>

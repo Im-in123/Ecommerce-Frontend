@@ -58,7 +58,7 @@ const InventoryLogin = () => {
     <div className="signup-page">
       <div className="content">
         <div className="img-cont">
-          <img src={require("../../../assets/slide/sofa.jpg")} alt="" />
+          {/* <img src={require("../../../assets/slide/sofa.jpg")} alt="" /> */}
         </div>
         <div className="form-container">
           <div>

@@ -79,7 +79,7 @@ const BasicInfo = () => {
     if (result) {
       setLoading(false);
       console.log("res::", result.data);
-      dispatch({ type: userDetailAction, userDetail: result.data });
+      dispatch({ type: userDetailAction, payload: result.data });
     }
     setLoading(false);
     // alert("Successfully updated!");
@@ -115,7 +115,7 @@ const BasicInfo = () => {
                 <label htmlFor="first_name">
                   <span>First Name:</span>
                   <input
-                    autoFocus
+                    // autoFocus
                     type="text"
                     placeholder="First Name"
                     name="first_name"
@@ -131,7 +131,7 @@ const BasicInfo = () => {
                   <span>Full Name:</span>
 
                   <input
-                    autoFocus
+                    // autoFocus
                     type="text"
                     placeholder="Full Name"
                     name="full_name"

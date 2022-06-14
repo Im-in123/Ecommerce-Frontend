@@ -112,13 +112,13 @@ margin: 2rem;
     width: 100%;
     height:50%;
 }
-.info .title{
+.grid-item .info .title{
     height: 45%;
     font-size: 1rem;
     padding: 5px;
 
 }
-.info .price{
+.grid-item .info .price{
    color:  darkgoldenrod;
     height: 20%;
     padding:2px 5px;

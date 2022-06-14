@@ -80,6 +80,7 @@
   border-radius: 7px;
   border: 1px solid black;
   height: 25px;
+  overflow: hidden;
 }
 .search-and-add .search input{
  
@@ -127,7 +128,10 @@
     color:black;
     margin: 1rem;
 } 
-
+.inventory-aside .content a > i{
+ margin-right: 5px;
+  
+} 
 .inventory-aside .content a:hover{
  
   /* background-color:antiquewhite; */
@@ -235,6 +239,8 @@ justify-content: space-evenly;
     border-radius: 10px;
     border: none;
 outline: none;
+    height:100px;
+    width:450px;
   }
    .inventory-content form  li{
     color: red;

@@ -69,7 +69,7 @@ const CreateProfile = () => {
     if (result) {
       setLoading(false);
       console.log("res::", result.data);
-      dispatch({ type: userDetailAction, userDetail: result.data });
+      dispatch({ type: userDetailAction, payload: result.data });
       if (!result.data.phonenumber) {
         navigate("/phone-number");
       } else {

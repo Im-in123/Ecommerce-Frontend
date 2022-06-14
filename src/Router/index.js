@@ -37,6 +37,7 @@ import BasicInfo from "../Pages/ProductPages/Auth/Profile/BasicInfo";
 import Password from "../Pages/ProductPages/Auth/Profile/Password";
 import Orders from "../Pages/ProductPages/Auth/Orders";
 import Email from "../Pages/ProductPages/Auth/Profile/Email";
+import ForgotPassword from "../Pages/ProductPages/Auth/Profile/ForgotPassword";
 
 const Router = () => {
   return (
@@ -87,6 +88,15 @@ const Router = () => {
           element={
             // <AuthController>
             <Password />
+            // </AuthController>
+          }
+          exact
+        />
+        <Route
+          path="/forgot-password"
+          element={
+            // <AuthController>
+            <ForgotPassword />
             // </AuthController>
           }
           exact

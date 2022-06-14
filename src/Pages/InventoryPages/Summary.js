@@ -11,7 +11,7 @@ const tempSummary = {
     count: 0,
     icon: (
       <span className="dashIcon inventory">
-        <i class="fa-solid fa-shirt"></i>
+        <i className="fa-solid fa-shirt"></i>
       </span>
     ),
   },
@@ -19,8 +19,8 @@ const tempSummary = {
     title: "Total Groups",
     count: 0,
     icon: (
-      <span className="dashIcon group">
-        <i class="fa-solid fa-layer-group"></i>
+      <span className="dashIcon">
+        <i className="fa-solid fa-layer-group"></i>
       </span>
     ),
   },
@@ -28,8 +28,8 @@ const tempSummary = {
     title: "Total Shops",
     count: 0,
     icon: (
-      <span className="dashIcon shop">
-        <i class="fa-solid fa-shop"></i>
+      <span className="dashIcon ">
+        <i className="fa-solid fa-shop"></i>
       </span>
     ),
   },
@@ -37,8 +37,8 @@ const tempSummary = {
     title: "Total Users",
     count: 0,
     icon: (
-      <span className="dashIcon user">
-        <i class="fa-solid fa-users-line"></i>{" "}
+      <span className="dashIcon">
+        <i className="fa-solid fa-users-line"></i>{" "}
       </span>
     ),
   },
@@ -82,7 +82,7 @@ const Summary = () => {
         {Object.values(summaryData).map((item, index) => (
           <div key={index} className="card summaryContent">
             <div className="info">
-              <div className="title">{item.title}</div>
+              <div className="titl">{item.title}</div>
               <div className="count">{loading ? "..." : item.count}</div>
             </div>
             <div className="icon">{item.icon}</div>

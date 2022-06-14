@@ -26,7 +26,7 @@ const InventoryAside = () => {
       <div className="content">
         {" "}
         <Link to="/inventory/dashboard" className="i-links">
-          <i class="fa-solid fa-border-all"></i>Dashboard
+          <i className="fa-solid fa-border-all"></i>Dashboard
         </Link>
         <Link
           className="i-links"
@@ -35,7 +35,7 @@ const InventoryAside = () => {
             search: "page=1",
           }}
         >
-          <i class="fa-solid fa-layer-group"></i>
+          <i className="fa-solid fa-layer-group"></i>
           Groups
         </Link>
         <Link
@@ -45,7 +45,7 @@ const InventoryAside = () => {
             search: "page=1",
           }}
         >
-          <i class="fa-solid fa-shirt"></i>
+          <i className="fa-solid fa-shirt"></i>
           Inventories
         </Link>
         <Link
@@ -55,7 +55,7 @@ const InventoryAside = () => {
             search: "page=1",
           }}
         >
-          <i class="fa-solid fa-shop"></i>
+          <i className="fa-solid fa-shop"></i>
           Shops
         </Link>
         <Link
@@ -65,7 +65,7 @@ const InventoryAside = () => {
             search: "page=1",
           }}
         >
-          <i class="fa-solid fa-users-line"></i> Users
+          <i className="fa-solid fa-users-line"></i> Users
         </Link>
         <Link
           className="i-links"
@@ -74,7 +74,7 @@ const InventoryAside = () => {
             search: "page=1",
           }}
         >
-          <i class="fa-brands fa-creative-commons-by"></i> User Activities
+          <i className="fa-brands fa-creative-commons-by"></i> User Activities
         </Link>
       </div>
     </aside>

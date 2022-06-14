@@ -122,9 +122,10 @@ const Search = () => {
         <div className="search">
           <div className="search-input">
             <input
+              autoFocus
               type="search"
               className="search-field"
-              placeholder=""
+              placeholder="Search our products, categories.."
               name="search"
               value={search}
               onChange={(e) => {

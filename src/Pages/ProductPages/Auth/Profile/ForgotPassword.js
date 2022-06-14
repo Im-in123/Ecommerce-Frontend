@@ -69,7 +69,7 @@ const ForgotPassword = () => {
               onChange={onChange}
               required={true}
             />
-            <label for="email">
+            <label htmlFor="email">
               <br />
               Email
             </label>

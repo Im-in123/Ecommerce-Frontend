@@ -18,7 +18,7 @@
   top: 7vh;
   right: 0;
   margin: 1rem;
-  font-size: 3rem;
+  font-size: 1.5rem;
   color: #006ce0;
   cursor: pointer;
 }
@@ -52,6 +52,10 @@
   position: relative;
 }
 
+
+.sidebar ul li  span{
+  margin-right: 5px;
+}
 .sidebar ul li.active {
   background: #006ce0;
   border-bottom-left-radius: var(--border-radius);
@@ -82,7 +86,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   margin: 1rem;
   cursor: pointer;
 }
@@ -115,4 +119,17 @@ body.toggle.section {
 .settings-main .settings-content {
   padding-top: 5vh;
  
+}
+
+@media screen and (max-width: 840px) {
+  .close-icon {
+    
+    font-size: 1rem;
+  
+  }
+  .hamburger-menu {
+  
+    font-size: 1rem;
+    
+  }
 }

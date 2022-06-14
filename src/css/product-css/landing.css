@@ -321,7 +321,7 @@
     @media screen and (max-width: 840px) {
        #logo2{ 
         margin: 0px !important;
-        margin-right:15px  !important;
+        /* margin-right:5px  !important; */
         }
         #logo2 img{
         width:70px;
@@ -343,6 +343,10 @@
         /* margin-left: 20px; */
 
         }   
+
+        .topnav .cart-icon {
+          margin-right: 40px !important;
+        }
       .topnav a {
         float:right;
         display: block;

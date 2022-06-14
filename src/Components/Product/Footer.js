@@ -26,7 +26,7 @@ const Footer = () => {
         </div> */}
         <span className="border-shape"></span>
         <div className="bottom_content">
-          <section>
+          {/* <section>
             <Link to="#">
               <i className="fa fa-facebook"></i>
             </Link>
@@ -39,11 +39,9 @@ const Footer = () => {
             <Link to="#">
               <i className="fa fa-telegram"></i>
             </Link>
-          </section>
+          </section> */}
           <section>
-            <Link to="#">Home</Link>
             <Link to="#">About us</Link>
-            <Link to="#">Order</Link>
             <Link to="#">Contact Us</Link>
           </section>
         </div>

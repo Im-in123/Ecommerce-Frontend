@@ -5,7 +5,11 @@ import { store } from "../stateManagement/store";
 import { userDetailAction } from "../stateManagement/actions";
 import { useNavigate } from "react-router-dom";
 import { tokenName } from "./authController.js";
-import { SALES_USER_TYPE, SHOPPER_USER_TYPE } from "../constants.js";
+import {
+  ADMIN_USER_TYPE,
+  SALES_USER_TYPE,
+  SHOPPER_USER_TYPE,
+} from "../constants.js";
 
 export const logout = async (props = "") => {
   if (localStorage.getItem(tokenName)) {
@@ -106,15 +110,29 @@ export const checkCreateState = async (
     console.log(userProfile.data);
     console.log(userProfile.data);
     dispatch({ type: userDetailAction, payload: userProfile.data });
-    if (userProfile.data.user_type === SALES_USER_TYPE) {
+    if (
+      userProfile.data.user.user_type === ADMIN_USER_TYPE &&
+      userProfile.data.user.type_verified === true
+    ) {
       setChecking(false);
       return;
-    } else if (userProfile.data.user_type === SHOPPER_USER_TYPE) {
-      navigate("login");
+    }
+    if (
+      userProfile.data.user.user_type === SALES_USER_TYPE &&
+      userProfile.data.user.type_verified === true
+    ) {
+      setChecking(false);
       return;
     }
-    setChecking(false);
-    return;
+    if (userProfile.data.user.user_type === SHOPPER_USER_TYPE) {
+      // setChecking(false);
+
+      logout();
+      return;
+    }
+    logout();
+    // setChecking(false);
+    // return;
   }
   const getNewAccess = await axiosHandler({
     method: "post",

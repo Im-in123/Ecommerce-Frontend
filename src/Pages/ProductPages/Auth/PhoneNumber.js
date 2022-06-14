@@ -66,7 +66,7 @@ const PhoneNumber = () => {
 
     if (result) {
       console.log("res::", result.data);
-      dispatch({ type: userDetailAction, userDetail: result.data });
+      dispatch({ type: userDetailAction, payload: result.data });
       // if (!result.data.city) {
       //   navigate("/Address");
       // } else {
