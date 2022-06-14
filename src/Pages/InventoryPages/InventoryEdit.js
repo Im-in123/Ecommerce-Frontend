@@ -374,7 +374,7 @@ const UpdateInventory = (props) => {
         if (!e.code !== "Escape") return;
       });
     };
-  }, [props.inventoryData]);
+  }, []);
 
   const submitAddInventory = async () => {
     console.log(imgIds);
@@ -670,7 +670,7 @@ const UpdateInventory = (props) => {
                   </label>
                   {fieldsError.belongs_to && <li>{fieldsError.belongs_to}</li>}
                 </div>
-                <div className="input-container">
+                <div className="">
                   <label htmlFor="decription">
                     <span>Description:</span>
 
@@ -682,7 +682,7 @@ const UpdateInventory = (props) => {
                       required
                     ></textarea>
                   </label>
-                  {fieldsError.compare_price && (
+                  {fieldsError.description && (
                     <li>{fieldsError.description}</li>
                   )}
                 </div>
