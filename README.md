@@ -1,3 +1,3 @@
 # Ecommerce-Frontend
-Frontend built with React JS.
+Ecommerce webapp with frontend built in React JS.
 View live version at https://swelyn.netlify.app
